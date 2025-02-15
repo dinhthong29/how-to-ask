@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Ask a Girl Out (Easy Tutorial)</title>
+    <style>
+        body {
+            background-color: #ffd1dc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #ff4081;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-title {
+            color: #ff4081;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ff4081;
+            color: white;
+        }
+
+        #yesBtn, #noBtn {
+            display: none;
+        }
+
+        #noBtn {
+            background-color: #9c27b0;
+        }
+
+        .message {
+            color: #ff4081;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .celebration {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 208, 220, 0.9);
+            z-index: 1000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .celebration h2 {
+            color: #ff4081;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .emoji {
+            font-size: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="tutorial-start">
+            <h1>How to Ask a Girl Out?</h1>
+            <p style="font-size: 1.3em; color: #ff4081;">💝 Easy Tutorial 💝</p>
+            <button class="btn" onclick="startTutorial()">Please click this to continue reading</button>
+        </div>
+
+        <div id="step1" style="display: none;">
+            <h2 class="step-title">Step 1: Figure out if she's alive</h2>
+            <p style="font-size: 1.3em; color: #ff4081;">🧟‍♀️ Essential Zombie Check 🧟‍♀️</p>
+            <p style="font-size: 1.2em; color: #ff6b9d;">Because dating the undead is generally not recommended</p>
+            <button class="btn" onclick="showQuestion(1)">Proceed with vital signs check</button>
+        </div>
+
+        <div id="question1" style="display: none;">
+            <h2 class="step-title">Mortality Status Verification</h2>
+            <h2>Dearest potential conversation partner, are you currently experiencing the phenomenon known as being alive?</h2>
+            <div class="buttons">
+                <button id="yesBtn" class="btn">Yes!</button>
+                <button id="noBtn" class="btn">No</button>
+            </div>
+            <p id="message" class="message"></p>
+        </div>
+
+        <div id="step2" style="display: none;">
+            <h2 class="step-title">Step 2: Find out if she's a she</h2>
+            <p style="font-size: 1.3em; color: #ff4081;">🔍 Critical investigation time! 🔍</p>
+            <p style="font-size: 1.2em; color: #ff6b9d;">Warning: This step requires advanced observation skills</p>
+            <button class="btn" onclick="showQuestion(2)">Click for scientific inquiry</button>
+        </div>
+
+        <div id="question2" style="display: none;">
+            <h2 class="step-title">Extremely Important Gender Survey</h2>
+            <h2>In the grand cosmic scheme of existence, do you happen to possess the chromosomal configuration commonly associated with the female variety of human beings?</h2>
+            <div class="buttons">
+                <button id="yesBtn2" class="btn">Yes!</button>
+                <button id="noBtn2" class="btn">No</button>
+            </div>
+            <p id="message2" class="message"></p>
+        </div>
+
+        <div id="step3" style="display: none;">
+            <h2 class="step-title">Step 3: Does she find you attractive</h2>
+            <p style="font-size: 1.3em; color: #ff4081;">🎭 The Moment of Truth 🎭</p>
+            <p style="font-size: 1.2em; color: #ff6b9d;">Time to face the mirror of destiny!</p>
+            <button class="btn" onclick="showQuestion(3)">Initiate attractiveness assessment</button>
+        </div>
+
+        <div id="question3" style="display: none;">
+            <h2 class="step-title">Aesthetic Evaluation Protocol</h2>
+            <h2>Upon careful observation of my physical form, does your brain produce the chemical cocktail commonly associated with finding someone aesthetically pleasing? 🧪✨</h2>
+            <div class="buttons">
+                <button id="yesBtn3" class="btn">Yes!</button>
+                <button id="noBtn3" class="btn">No</button>
+            </div>
+            <p id="message3" class="message"></p>
+        </div>
+
+        <div id="step4" style="display: none;">
+            <h2 class="step-title">Step 4: Ask if she likes food</h2>
+            <p style="font-size: 1.3em; color: #ff4081;">🍕 Crucial Sustenance Investigation 🍔</p>
+            <p style="font-size: 1.2em; color: #ff6b9d;">Because photosynthesis is not a human thing</p>
+            <button class="btn" onclick="showQuestion(4)">Launch nutritional inquiry</button>
+        </div>
+
+        <div id="question4" style="display: none;">
+            <h2 class="step-title">Nutritional Preference Analysis</h2>
+            <h2>Do you, as a human entity, participate in the ritualistic practice of converting edible matter into energy while experiencing positive sensory feedback? 🍝</h2>
+            <div class="buttons">
+                <button id="yesBtn4" class="btn">Yes!</button>
+                <button id="noBtn4" class="btn">No</button>
+            </div>
+            <p id="message4" class="message"></p>
+        </div>
+
+        <div id="step5" style="display: none;">
+            <h2 class="step-title">Step 5: Ask the most important question of the day!!!</h2>
+            <p style="font-size: 1.3em; color: #ff4081;">🎭 The Grand Finale 🎭</p>
+            <p style="font-size: 1.2em; color: #ff6b9d;">Preparing to initiate advanced social interaction...</p>
+            <button class="btn" onclick="showQuestion(5)">Execute final protocol</button>
+        </div>
+
+        <div id="question5" style="display: none;">
+            <h2 class="step-title">Social Interaction Proposal</h2>
+            <h2>Would you, a living, female, aesthetically-pleased, food-enjoying human, consider synchronizing your food consumption schedule with mine in a socially acceptable location? 🍽️✨</h2>
+            <div class="buttons">
+                <button id="yesBtn5" class="btn">Yes!</button>
+                <button id="noBtn5" class="btn">No</button>
+            </div>
+            <p id="message5" class="message"></p>
+        </div>
+    </div>
+
+    <div class="celebration" id="celebration">
+        <div class="emoji">🎉</div>
+        <h2>Yeah, I knew you would!</h2>
+        <div class="emoji">🍽️</div>
+        <p style="font-size: 1.5em; color: #ff4081;">Tutorial completed successfully! 💝</p>
+    </div>
+
+    <script>
+        const messages = {
+            1: [ // Alive messages
+                "Wait, if you're not alive, how are you clicking? 👻",
+                "Zombies can't use computers! ...right? 🧟‍♀️",
+                "Is this a ghost trying to get a date? 👻",
+                "Sorry, I don't speak dead person! 💀",
+                "ERROR 404: PULSE NOT FOUND 🫀",
+                "Please maintain alive status to continue! 🧬",
+                "Resurrection required before dating! 🪦",
+                "Being alive is kind of important here... 🌱",
+                "The living world called, they miss you! 🌍",
+                "Did you try turning yourself on and off again? 🔄"
+            ],
+            2: [ // Gender messages
+                "Are you sure? Double check! 🔍",
+                "Maybe look in a mirror real quick? 🪞",
+                "Biology test failed! 🧬",
+                "Gender loading... please wait... ⌛",
+                "Have you checked your chromosomes lately? 🧬",
+                "This is a very important detail! 📝",
+                "I'm gonna need you to verify that... 🤔",
+                "Are you absolutely positively sure? 🎯",
+                "Perhaps consult your birth certificate? 📜",
+                "This is crucial information! 🔐"
+            ],
+            3: [ // Attractiveness messages
+                "Your eyes might need checking! 👀",
+                "Did you forget to put on your glasses? 👓",
+                "Beauty is in the eye of the... oh wait, where are you going? 🏃‍♀️",
+                "Mirror mirror on the wall... 🪞",
+                "Have you seen my good side yet? 📸",
+                "The lighting is bad, try again! 💡",
+                "But I used my best filter! 📱",
+                "My mom says I'm handsome! 🤷‍♂️",
+                "Beauty is only skin d... come back! 🏃‍♂️",
+                "I recently got a haircut though! ✂️"
+            ],
+            4: [ // Food messages
+                "Do you photosynthesize instead? 🌱",
+                "Everyone has to eat! Even plants! 🌿",
+                "Hunger is just a social construct? 🤔",
+                "When was the last time you ate?! 🍽️",
+                "Are you some kind of robot? 🤖",
+                "Food is life! Literally! 🍕",
+                "But I know a great restaurant! 🍝",
+                "Even air is technically food... 💨",
+                "Sustenance is non-negotiable! 🍳",
+                "Is that your stomach growling? 🦁"
+            ],
+            5: [ // Date messages
+                "Free food though! 🍔",
+                "I'm paying! Did I mention that? 💰",
+                "But I made reservations! 📅",
+                "It's a really fancy place! ✨",
+                "I promise I don't bite! 😇",
+                "I picked the perfect spot! 🌟",
+                "There's dessert involved! 🍰",
+                "They have the best menu! 📖",
+                "It's the highest rated place in town! ⭐",
+                "But I already told my mom you said yes! 📞"
+            ]
+        };
+
+        function startTutorial() {
+            document.getElementById('tutorial-start').style.display = 'none';
+            document.getElementById('step1').style.display = 'block';
+        }
+
+        function showQuestion(step) {
+            document.getElementById('step' + step).style.display = 'none';
+            document.getElementById('question' + step).style.display = 'block';
+            setupButtons(step);
+        }
+
+        function setupButtons(step) {
+            const yesBtn = document.getElementById('yesBtn' + (step > 1 ? step : ''));
+            const noBtn = document.getElementById('noBtn' + (step > 1 ? step : ''));
+            const message = document.getElementById('message' + (step > 1 ? step : ''));
+            let noBtnMoved = 0;
+
+            yesBtn.style.display = 'block';
+            noBtn.style.display = 'block';
+
+            noBtn.addEventListener('mouseover', function() {
+                if (noBtnMoved < 10) {
+                    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+                    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+                    noBtn.style.position = 'fixed';
+                    noBtn.style.left = `${x}px`;
+                    noBtn.style.top = `${y}px`;
+                    message.textContent = messages[step][noBtnMoved];
+                    message.style.display = 'block';
+                    noBtnMoved++;
+                } else {
+                    noBtn.style.display = 'none';
+                    yesBtn.style.fontSize = '2em';
+                    yesBtn.style.padding = '20px 40px';
+                    message.textContent = "Now you can only choose yes! 💖";
+                    message.style.fontSize = '1.5em';
+                    message.style.color = '#ff1493';
+                }
+            });
+
+            yesBtn.addEventListener('click', function() {
+                if (step === 5) {
+                    document.getElementById('celebration').style.display = 'flex';
+                } else {
+                    document.getElementById('question' + step).style.display = 'none';
+                    document.getElementById('step' + (step + 1)).style.display = 'block';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
